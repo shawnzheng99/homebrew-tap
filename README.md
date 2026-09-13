@@ -1,16 +1,38 @@
-# Shawnzheng99 Tap
+# Shawn Zheng's Homebrew Tap
 
-## How do I install these formulae?
+## Codex Current
 
-`brew install shawnzheng99/tap/<formula>`
+Install the signed and notarized macOS app together with its Homebrew-managed Codex CLI dependency:
 
-Or `brew tap shawnzheng99/tap` and then `brew install <formula>`.
+```sh
+brew install --cask shawnzheng99/tap/codex-current
+codex login
+```
 
-Or, in a `brew bundle` `Brewfile`:
+Project homepage: <https://github.com/shawnzheng99/codexcurrent>
+
+## Other packages
+
+Install formulae and casks from this tap with fully qualified names:
+
+```sh
+brew install shawnzheng99/tap/<formula>
+brew install --cask shawnzheng99/tap/<cask>
+```
+
+Or tap the repository first and use short names. On Homebrew versions that require tap trust, trust only the package you intend to install:
+
+```sh
+brew tap shawnzheng99/tap
+brew trust --cask shawnzheng99/tap/<cask>
+brew install --cask <cask>
+```
+
+In a `Brewfile`:
 
 ```ruby
 tap "shawnzheng99/tap"
-brew "<formula>"
+cask "codex-current"
 ```
 
 ## Documentation
